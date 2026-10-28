@@ -1,0 +1,611 @@
+{
+  "name": "flawpath",
+  "version": "1.0.0",
+  "category": "backend-api",
+  "license": "MIT",
+  "runtime": "Claude Code, opencode, or any agent runtime that loads SKILL.md files",
+  "description": "50 validated backend implementation skills: route and parameter mapping, mass assignment, coercion, filtering, error and debug surfaces, concurrency and idempotency, confirmation and framework-level fixes, with a handler-inventory-to-assessment-plan CLI.",
+  "skill_count": 50,
+  "skills": [
+    {
+      "slug": "api-assessment-boundary",
+      "title": "API Assessment Boundary",
+      "path": "skills/api-assessment-boundary/SKILL.md",
+      "tags": [
+        "scope",
+        "authorization",
+        "rules-of-engagement"
+      ],
+      "meta_phase": "scope",
+      "sha256": "4a84e0ad729afcbcc90b5f5c6e52486b7ac3fbe98606187970bae11a974ef59e"
+    },
+    {
+      "slug": "handler-and-route-inventory",
+      "title": "Handler and Route Inventory",
+      "path": "skills/handler-and-route-inventory/SKILL.md",
+      "tags": [
+        "scope",
+        "inventory",
+        "routes"
+      ],
+      "meta_phase": "scope",
+      "sha256": "82e938f27a1bdec00de15153ca9cc32b33e06007ed925b50db05fbc3f11e367f"
+    },
+    {
+      "slug": "write-surface-and-state-map",
+      "title": "Write Surface and State Map",
+      "path": "skills/write-surface-and-state-map/SKILL.md",
+      "tags": [
+        "scope",
+        "state",
+        "inventory"
+      ],
+      "meta_phase": "scope",
+      "sha256": "01564d06ef696476f65e3ca87589af5696e859f21b955686e0a1cdd39bb818b1"
+    },
+    {
+      "slug": "environment-configuration-delta",
+      "title": "Environment Configuration Delta",
+      "path": "skills/environment-configuration-delta/SKILL.md",
+      "tags": [
+        "scope",
+        "configuration",
+        "environment"
+      ],
+      "meta_phase": "scope",
+      "sha256": "c23eeefc3462bf3509b6ea24814568b9eb9a9e54e80d007487e4d08acbd8a6a1"
+    },
+    {
+      "slug": "synthetic-record-only-policy",
+      "title": "Synthetic Record Only Policy",
+      "path": "skills/synthetic-record-only-policy/SKILL.md",
+      "tags": [
+        "scope",
+        "data-handling",
+        "safety"
+      ],
+      "meta_phase": "scope",
+      "sha256": "11c8f28e4c84f86820a1d21ddf019f90fd47a25e9768e1c6123b475bb0ccabf5"
+    },
+    {
+      "slug": "mutation-budget-and-rollback",
+      "title": "Mutation Budget and Rollback",
+      "path": "skills/mutation-budget-and-rollback/SKILL.md",
+      "tags": [
+        "scope",
+        "rate-limit",
+        "operations"
+      ],
+      "meta_phase": "scope",
+      "sha256": "a289516f81915c78d9d8643f22ac5f2fef8b0922f5acc5d445b7df07082fde54"
+    },
+    {
+      "slug": "observability-and-ownership-record",
+      "title": "Observability and Ownership Record",
+      "path": "skills/observability-and-ownership-record/SKILL.md",
+      "tags": [
+        "scope",
+        "observability",
+        "logs"
+      ],
+      "meta_phase": "scope",
+      "sha256": "aae2dfd37238aec563435f5c55ab2df9b0adf7d86b88875f1b6297eb40bd0eb6"
+    },
+    {
+      "slug": "route-verb-matrix",
+      "title": "Route Verb Matrix",
+      "path": "skills/route-verb-matrix/SKILL.md",
+      "tags": [
+        "map",
+        "routes",
+        "methods"
+      ],
+      "meta_phase": "map",
+      "sha256": "f4ea52b813a74f4a79724f82652320387205e83fabc1728c82b38512fe324f1c"
+    },
+    {
+      "slug": "parameter-provenance-map",
+      "title": "Parameter Provenance Map",
+      "path": "skills/parameter-provenance-map/SKILL.md",
+      "tags": [
+        "map",
+        "parameters",
+        "provenance"
+      ],
+      "meta_phase": "map",
+      "sha256": "23a11f615570ab19fd9b6bc1fdf56e699e8310d18ae602d15e5cf443eec051f6"
+    },
+    {
+      "slug": "deserialization-and-validation-boundary",
+      "title": "Deserialization and Validation Boundary",
+      "path": "skills/deserialization-and-validation-boundary/SKILL.md",
+      "tags": [
+        "map",
+        "parsing",
+        "validation"
+      ],
+      "meta_phase": "map",
+      "sha256": "40c6c78a7121701020f1710d88c3ac692510a5eee446b097bd7a807d140b3740"
+    },
+    {
+      "slug": "object-identifier-shape",
+      "title": "Object Identifier Shape",
+      "path": "skills/object-identifier-shape/SKILL.md",
+      "tags": [
+        "map",
+        "identifiers",
+        "authorization"
+      ],
+      "meta_phase": "map",
+      "sha256": "24fede0d7f387e3f2aac38d0d26e96e3562a4e4869c0b3eb4dfa77b44000e41a"
+    },
+    {
+      "slug": "middleware-chain-order",
+      "title": "Middleware Chain Order",
+      "path": "skills/middleware-chain-order/SKILL.md",
+      "tags": [
+        "map",
+        "middleware",
+        "order"
+      ],
+      "meta_phase": "map",
+      "sha256": "672c00655daafae5c06332a4fa880f3fdd95041786f752983800803e1ed17aa8"
+    },
+    {
+      "slug": "response-field-exposure-map",
+      "title": "Response Field Exposure Map",
+      "path": "skills/response-field-exposure-map/SKILL.md",
+      "tags": [
+        "map",
+        "responses",
+        "exposure"
+      ],
+      "meta_phase": "map",
+      "sha256": "07dcac8d4fad2357fc2ebb615e3bab77fec6dbbfd1a3efc6bc42df526d0e83ad"
+    },
+    {
+      "slug": "error-surface-and-shape-map",
+      "title": "Error Surface and Shape Map",
+      "path": "skills/error-surface-and-shape-map/SKILL.md",
+      "tags": [
+        "map",
+        "errors",
+        "responses"
+      ],
+      "meta_phase": "map",
+      "sha256": "5113a00b4e1c6690d1de5b70464d3b09833236ecfda7656515ca89960eee7f31"
+    },
+    {
+      "slug": "integration-and-async-surface-map",
+      "title": "Integration and Async Surface Map",
+      "path": "skills/integration-and-async-surface-map/SKILL.md",
+      "tags": [
+        "map",
+        "async",
+        "integration"
+      ],
+      "meta_phase": "map",
+      "sha256": "b6097031017cd05121825c5df2a95edb7d2134c85dce17f9ec7f6bb47d778b58"
+    },
+    {
+      "slug": "unknown-field-acceptance",
+      "title": "Unknown Field Acceptance",
+      "path": "skills/unknown-field-acceptance/SKILL.md",
+      "tags": [
+        "probe",
+        "mass-assignment",
+        "validation"
+      ],
+      "meta_phase": "probe",
+      "sha256": "1d2bbe6afca343b8763f9c69f2d2c64f1d9a9d47b5d6e6c8de5cb06c7082149f"
+    },
+    {
+      "slug": "privileged-field-write-probe",
+      "title": "Privileged Field Write Probe",
+      "path": "skills/privileged-field-write-probe/SKILL.md",
+      "tags": [
+        "probe",
+        "authorization",
+        "mass-assignment"
+      ],
+      "meta_phase": "probe",
+      "sha256": "05a74a1465d196fe21d0adc970c88c40cf583f7a391b6fbbd72b98e4ded857e8"
+    },
+    {
+      "slug": "nested-and-dotted-key-injection",
+      "title": "Nested and Dotted Key Injection",
+      "path": "skills/nested-and-dotted-key-injection/SKILL.md",
+      "tags": [
+        "probe",
+        "mass-assignment",
+        "parsing"
+      ],
+      "meta_phase": "probe",
+      "sha256": "3efcd8878536a6361cd0248f16ee9a184fd62b6402e002ec9ed550189807e01e"
+    },
+    {
+      "slug": "type-coercion-in-write-path",
+      "title": "Type Coercion in Write Path",
+      "path": "skills/type-coercion-in-write-path/SKILL.md",
+      "tags": [
+        "probe",
+        "coercion",
+        "validation"
+      ],
+      "meta_phase": "probe",
+      "sha256": "234ed6bd85284e9f0d7db13b0955b08cd0f955e85d2c288e3c4c193c39135953"
+    },
+    {
+      "slug": "default-value-override-probe",
+      "title": "Default Value Override Probe",
+      "path": "skills/default-value-override-probe/SKILL.md",
+      "tags": [
+        "probe",
+        "defaults",
+        "mass-assignment"
+      ],
+      "meta_phase": "probe",
+      "sha256": "ca1676bf3788ea03e8cc5e8b9be2ba69fba498c0ccc183307aacbb0f5a3961af"
+    },
+    {
+      "slug": "batch-write-single-record-scope",
+      "title": "Batch Write Single-Record Scope",
+      "path": "skills/batch-write-single-record-scope/SKILL.md",
+      "tags": [
+        "probe",
+        "batch",
+        "writes"
+      ],
+      "meta_phase": "probe",
+      "sha256": "ae74ea1ef12bbbf2fe5721dcb6e4fea37a0217f576a1a86affb78208c6561ebb"
+    },
+    {
+      "slug": "filter-parameter-injection",
+      "title": "Filter Parameter Injection",
+      "path": "skills/filter-parameter-injection/SKILL.md",
+      "tags": [
+        "probe",
+        "filtering",
+        "authorization"
+      ],
+      "meta_phase": "probe",
+      "sha256": "8d89524785d1927e53122958cdb78f4d6980d048f8eb677823677e457bfba3c8"
+    },
+    {
+      "slug": "ordering-and-pagination-boundary",
+      "title": "Ordering and Pagination Boundary",
+      "path": "skills/ordering-and-pagination-boundary/SKILL.md",
+      "tags": [
+        "probe",
+        "pagination",
+        "resources"
+      ],
+      "meta_phase": "probe",
+      "sha256": "57ed1c9f7d8018d740652dea9d76035449da566f81bc90370648af936d87c529"
+    },
+    {
+      "slug": "sort-and-search-field-reach",
+      "title": "Sort and Search Field Reach",
+      "path": "skills/sort-and-search-field-reach/SKILL.md",
+      "tags": [
+        "probe",
+        "search",
+        "exposure"
+      ],
+      "meta_phase": "probe",
+      "sha256": "a3fbadcc9e4f208321d53bfb4efddd19448084bf843b21655b38644a457e7190"
+    },
+    {
+      "slug": "error-triggering-for-shape-disclosure",
+      "title": "Error Triggering for Shape Disclosure",
+      "path": "skills/error-triggering-for-shape-disclosure/SKILL.md",
+      "tags": [
+        "probe",
+        "errors",
+        "disclosure"
+      ],
+      "meta_phase": "probe",
+      "sha256": "a23c9b6c55bbb38f18f2155d98a653e1c872642a90d89a247a1d49fb28910c4c"
+    },
+    {
+      "slug": "debug-endpoint-exposure",
+      "title": "Debug Endpoint Exposure",
+      "path": "skills/debug-endpoint-exposure/SKILL.md",
+      "tags": [
+        "probe",
+        "debug",
+        "routes"
+      ],
+      "meta_phase": "probe",
+      "sha256": "38d5850bb40ac3db0354600fbc5070c054ecc3649e2532cd5947598f09456094"
+    },
+    {
+      "slug": "content-type-parser-selection",
+      "title": "Content-Type Parser Selection",
+      "path": "skills/content-type-parser-selection/SKILL.md",
+      "tags": [
+        "probe",
+        "content-type",
+        "parsing"
+      ],
+      "meta_phase": "probe",
+      "sha256": "a06c857b7975ec1c21d16b208106034db2574716808562a64090e0c44ef962bb"
+    },
+    {
+      "slug": "duplicate-field-key-confusion",
+      "title": "Duplicate Field Key Confusion",
+      "path": "skills/duplicate-field-key-confusion/SKILL.md",
+      "tags": [
+        "probe",
+        "parsing",
+        "confusion"
+      ],
+      "meta_phase": "probe",
+      "sha256": "cfd7b45ab07fb5333c41f0378399e5c8dcf9a1c02d2c36afd0de403c72af98e1"
+    },
+    {
+      "slug": "partial-update-omission-behavior",
+      "title": "Partial Update Omission Behavior",
+      "path": "skills/partial-update-omission-behavior/SKILL.md",
+      "tags": [
+        "probe",
+        "patch",
+        "state"
+      ],
+      "meta_phase": "probe",
+      "sha256": "d515ea584665af1b27b772063e7f335a89831f063c1df0f56b0692b7ce437b95"
+    },
+    {
+      "slug": "enum-and-range-boundary-probe",
+      "title": "Enum and Range Boundary Probe",
+      "path": "skills/enum-and-range-boundary-probe/SKILL.md",
+      "tags": [
+        "probe",
+        "validation",
+        "boundaries"
+      ],
+      "meta_phase": "probe",
+      "sha256": "26bc097156d0ed304a89196fd2e216abaf37221b3c40c1b9419f1b5f7ce5e2e9"
+    },
+    {
+      "slug": "concurrent-write-interleaving",
+      "title": "Concurrent Write Interleaving",
+      "path": "skills/concurrent-write-interleaving/SKILL.md",
+      "tags": [
+        "probe",
+        "concurrency",
+        "state"
+      ],
+      "meta_phase": "probe",
+      "sha256": "e80d3075d21c087b08e8b499cb7424572a2de92c84bc521c0283af05a7509f14"
+    },
+    {
+      "slug": "idempotency-key-handling",
+      "title": "Idempotency Key Handling",
+      "path": "skills/idempotency-key-handling/SKILL.md",
+      "tags": [
+        "probe",
+        "idempotency",
+        "concurrency"
+      ],
+      "meta_phase": "probe",
+      "sha256": "30be360dfceab0c5c7e6074d626a42d65bc68e5362bc5236b10c4c8409d88106"
+    },
+    {
+      "slug": "rate-limit-enforcement-observation",
+      "title": "Rate Limit Enforcement Observation",
+      "path": "skills/rate-limit-enforcement-observation/SKILL.md",
+      "tags": [
+        "probe",
+        "rate-limit",
+        "resources"
+      ],
+      "meta_phase": "probe",
+      "sha256": "3cb66315ade3af692d1164090fa9c0f6b7234bfd7c0912fbb1ea78a145846492"
+    },
+    {
+      "slug": "cache-and-vary-invalidation-on-write",
+      "title": "Cache and Vary Invalidation on Write",
+      "path": "skills/cache-and-vary-invalidation-on-write/SKILL.md",
+      "tags": [
+        "probe",
+        "caching",
+        "state"
+      ],
+      "meta_phase": "probe",
+      "sha256": "14f5946d404df78d34b76e617064128b9d8d453b47a8a3b3b91e8987723602f3"
+    },
+    {
+      "slug": "clean-state-reproduction",
+      "title": "Clean-State Reproduction",
+      "path": "skills/clean-state-reproduction/SKILL.md",
+      "tags": [
+        "confirm",
+        "reproduction",
+        "method"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "140ae45da6f465b72e2db589fff1504ac776a549d2bfc95fda67b11e39058575"
+    },
+    {
+      "slug": "single-input-attribution",
+      "title": "Single-Input Attribution",
+      "path": "skills/single-input-attribution/SKILL.md",
+      "tags": [
+        "confirm",
+        "attribution",
+        "method"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "b8a76821d66983a25574b414abeb7b62dd80e45938e261b63b024850110f8f0f"
+    },
+    {
+      "slug": "response-differential-comparison",
+      "title": "Response Differential Comparison",
+      "path": "skills/response-differential-comparison/SKILL.md",
+      "tags": [
+        "confirm",
+        "comparison",
+        "evidence"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "39cb14c6bae855f7c5330f582809944bf8e1f1708e26419462698555b343eb69"
+    },
+    {
+      "slug": "precondition-and-effect-statement",
+      "title": "Precondition and Effect Statement",
+      "path": "skills/precondition-and-effect-statement/SKILL.md",
+      "tags": [
+        "confirm",
+        "impact",
+        "severity"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "1f467f2e0425937095f76fdea321148baef78b374266cb2af3315a162c753e83"
+    },
+    {
+      "slug": "environment-transferability-check",
+      "title": "Environment Transferability Check",
+      "path": "skills/environment-transferability-check/SKILL.md",
+      "tags": [
+        "confirm",
+        "environment",
+        "reporting"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "d9011e3b43a595856339ccef1310330904f330c36e3549766a83dc954865e2e8"
+    },
+    {
+      "slug": "ruling-out-alternative-cause",
+      "title": "Ruling Out Alternative Cause",
+      "path": "skills/ruling-out-alternative-cause/SKILL.md",
+      "tags": [
+        "confirm",
+        "method",
+        "rigour"
+      ],
+      "meta_phase": "confirm",
+      "sha256": "1d84ea9a4e5fc66c11d72fd8e3917f6796dd4746135e8d0bf36a28a343a06f68"
+    },
+    {
+      "slug": "server-side-field-allowlist",
+      "title": "Server-Side Field Allowlist",
+      "path": "skills/server-side-field-allowlist/SKILL.md",
+      "tags": [
+        "harden",
+        "mass-assignment",
+        "validation"
+      ],
+      "meta_phase": "harden",
+      "sha256": "36ed00f4549df342d30b4c6442eb857b21ab3f415ba6bfe7e1029bb264517d27"
+    },
+    {
+      "slug": "strict-dto-and-validation-boundary",
+      "title": "Strict DTO and Validation Boundary",
+      "path": "skills/strict-dto-and-validation-boundary/SKILL.md",
+      "tags": [
+        "harden",
+        "validation",
+        "schema"
+      ],
+      "meta_phase": "harden",
+      "sha256": "8ae5c46ced857f6789685725b035cc6240b735218d6da8ca13555a7274b77e9d"
+    },
+    {
+      "slug": "uniform-error-response-and-correlation",
+      "title": "Uniform Error Response and Correlation",
+      "path": "skills/uniform-error-response-and-correlation/SKILL.md",
+      "tags": [
+        "harden",
+        "errors",
+        "disclosure"
+      ],
+      "meta_phase": "harden",
+      "sha256": "72107930ddf92821e7578015a57ae0c82fb91a293baacbbe148206c555b7da52"
+    },
+    {
+      "slug": "debug-surface-disabled-in-shared-environments",
+      "title": "Debug Surface Disabled in Shared Environments",
+      "path": "skills/debug-surface-disabled-in-shared-environments/SKILL.md",
+      "tags": [
+        "harden",
+        "debug",
+        "configuration"
+      ],
+      "meta_phase": "harden",
+      "sha256": "470bb0162ac151839cf5785807d06edf619655608ecdd6a8b2081aa24a33a38f"
+    },
+    {
+      "slug": "concurrency-guard-and-idempotent-write",
+      "title": "Concurrency Guard and Idempotent Write",
+      "path": "skills/concurrency-guard-and-idempotent-write/SKILL.md",
+      "tags": [
+        "harden",
+        "concurrency",
+        "idempotency"
+      ],
+      "meta_phase": "harden",
+      "sha256": "14a4c1abf54a55fa2f10a70927f6a529b3ac03eda09b87ff3445bf0613c23762"
+    },
+    {
+      "slug": "regression-probe-suite",
+      "title": "Regression Probe Suite",
+      "path": "skills/regression-probe-suite/SKILL.md",
+      "tags": [
+        "harden",
+        "regression",
+        "pipeline"
+      ],
+      "meta_phase": "harden",
+      "sha256": "76e6910b3e82fccdabe2f3f548ef622e77bc7e86b5f51de1a70bcde1b1872e57"
+    },
+    {
+      "slug": "implementation-finding-evidence-pack",
+      "title": "Implementation Finding Evidence Pack",
+      "path": "skills/implementation-finding-evidence-pack/SKILL.md",
+      "tags": [
+        "document",
+        "evidence",
+        "reporting"
+      ],
+      "meta_phase": "document",
+      "sha256": "a631aef04df15c7c81263c13e240045a2d1c529684289f521e9bfc9ad7f48ead"
+    },
+    {
+      "slug": "reproduction-steps-in-client-terms",
+      "title": "Reproduction Steps in Client Terms",
+      "path": "skills/reproduction-steps-in-client-terms/SKILL.md",
+      "tags": [
+        "document",
+        "reproduction",
+        "handover"
+      ],
+      "meta_phase": "document",
+      "sha256": "279d4bb1f3d16aeb40012096b0d6888756715816d3740bf731273143482c8aae"
+    },
+    {
+      "slug": "fix-worded-in-framework-terms",
+      "title": "Fix Worded in Framework Terms",
+      "path": "skills/fix-worded-in-framework-terms/SKILL.md",
+      "tags": [
+        "document",
+        "remediation",
+        "communication"
+      ],
+      "meta_phase": "document",
+      "sha256": "6137b31d36dd9420773a24013ce966b442143dc484abf48110f57d48e27c9942"
+    },
+    {
+      "slug": "coordinated-retest-and-closure",
+      "title": "Coordinated Retest and Closure",
+      "path": "skills/coordinated-retest-and-closure/SKILL.md",
+      "tags": [
+        "document",
+        "verification",
+        "closure"
+      ],
+      "meta_phase": "document",
+      "sha256": "d704644227ac61ec539f9e90a97f522a02e8d1911bf5f15af39d64a3ed4f8e79"
+    }
+  ]
+}

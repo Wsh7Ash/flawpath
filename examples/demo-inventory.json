@@ -1,0 +1,19 @@
+{
+  "target": "orders service",
+  "framework": "express-style router with a body parser middleware",
+  "routes": ["/api/v1/orders", "/api/v1/orders/:id", "/internal/reindex"],
+  "parameters": ["path", "query", "body", "header", "cookie"],
+  "auth_model": ["member", "billing-service", "internal-no-auth"],
+  "objects": ["order", "customer", "vendor"],
+  "observed": {
+    "unknown_field_policy": "pass through",
+    "validation_stage": "after construction",
+    "debug_routes": true,
+    "idempotency": "recorded but not enforced"
+  },
+  "concerns": [
+    "can a client set a field the role matrix reserves",
+    "which error shapes leak field names or a stack",
+    "does an update reset fields the request omitted"
+  ]
+}
